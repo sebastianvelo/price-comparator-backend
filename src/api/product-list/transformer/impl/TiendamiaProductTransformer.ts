@@ -2,7 +2,7 @@ import { Cheerio, Element } from "cheerio";
 import ProductTransformer from "../transformer.interface";
 
 class TiendamiaProductTransformer extends ProductTransformer {
-    protected getUrl = (element: Cheerio<Element>) => element.attr("href") ?? "";
+    protected getUrl = (element: Cheerio<Element>) => `https://tiendamia.com${element.attr("href")}` ?? "";
 
     protected getId = (element: Cheerio<Element>) => this.getUrl(element).split("/ar/producto?")[1].split("&")[0];
 

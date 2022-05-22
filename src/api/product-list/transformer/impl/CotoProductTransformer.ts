@@ -4,7 +4,7 @@ import ProductTransformer from "../transformer.interface";
 class CotoProductTransformer extends ProductTransformer {
     protected getUrl = (element: Cheerio<Element>) => `https://www.cotodigital3.com.ar${element.find("a").attr("href")}` ?? "";
 
-    protected getImage = (element: Cheerio<Element>) => element.find("img").attr("src") ?? "";
+    protected getImage = (element: Cheerio<Element>) => element.find(".atg_store_productImage > img").attr("src") ?? "";
 
     protected getName = (element: Cheerio<Element>) => element.find(".span_productName").text().replace(/\n/g, "").replace(/\t/g, "");
 

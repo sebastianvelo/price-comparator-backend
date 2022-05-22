@@ -3,6 +3,7 @@ import { logAccent, logInfo } from "../../../common/Logger";
 import PageSource from "../../common/source-url/page-source/page-source.interface";
 import ModelTransformer from "../../common/transformer/transformer.interface";
 import Product, { Calification, Price } from "../../product/product.interface";
+import * as SourceImageService from "../../../api/common/source-image/source-image.service";
 
 abstract class ProductTransformer implements ModelTransformer<Product> {
     protected getId: (element: Cheerio<Element>) => string | undefined = () => undefined;
@@ -21,8 +22,9 @@ abstract class ProductTransformer implements ModelTransformer<Product> {
             name: this.getName(element),
             price: this.getPrice(element),
             calification: this.getCalification(element),
+            sourceImage: SourceImageService.retrieveImage(source)
         };
-        if(product.price.value === -1) {
+        if(!product.price.value || product.price.value === -1) {
             logAccent(`\t\tIgnoring ${product.name}`);
             return undefined;
         };
