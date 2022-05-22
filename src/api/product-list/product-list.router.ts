@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import PageSource from "../common/source-url/page-source/page-source.interface";
+import PageSource from "../common/page-source/page-source.interface";
 import ProductListResponse from "./product-list.interface";
 import * as ProductListService from "./product-list.service";
 

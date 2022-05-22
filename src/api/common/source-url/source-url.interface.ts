@@ -1,4 +1,4 @@
-import PageSource from "./page-source/page-source.interface";
+import PageSource from "../page-source/page-source.interface";
 
 interface RetrievePage {
   source: PageSource;

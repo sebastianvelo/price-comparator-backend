@@ -1,5 +1,5 @@
 import { CheerioAPI } from "cheerio";
-import PageSource from "../../../common/source-url/page-source/page-source.interface";
+import PageSource from "../../../common/page-source/page-source.interface";
 import MercadoLibreProductTransformer from "../../transformer/impl/MercadoLibreProductTransformer";
 import ProductListScrapingStrategy from "../strategy.interface";
 

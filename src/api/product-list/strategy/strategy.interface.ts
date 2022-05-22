@@ -1,6 +1,6 @@
 import { Cheerio, CheerioAPI, Element } from "cheerio";
 import { logAccent, logTitle } from "../../../common/Logger";
-import PageSource from "../../common/source-url/page-source/page-source.interface";
+import PageSource from "../../common/page-source/page-source.interface";
 import ScrapingStrategy from "../../common/strategy/scraping-strategy.interface";
 import ProductListResponse from "../product-list.interface";
 import ProductTransformer from "../transformer/transformer.interface";

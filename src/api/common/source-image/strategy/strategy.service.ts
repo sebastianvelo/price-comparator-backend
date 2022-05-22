@@ -1,4 +1,4 @@
-import PageSource from "../../source-url/page-source/page-source.interface";
+import PageSource from "../../page-source/page-source.interface";
 import * as ScrapingStrategyService from "../../strategy/scraping-strategy.service";
 import CarrefourImageStrategy from "./impl/CarrefourImageStrategy";
 import CotoImageStrategy from "./impl/CotoImageStrategy";

@@ -1,5 +1,5 @@
 import { CheerioAPI } from "cheerio";
-import PageSource from "../source-url/page-source/page-source.interface";
+import PageSource from "../page-source/page-source.interface";
 
 interface ScrapingStrategy<T, S> {
     apply: (source: PageSource, query: string, $?: CheerioAPI) => T;

@@ -1,4 +1,4 @@
-import PageSource from "../../../source-url/page-source/page-source.interface";
+import PageSource from "../../../page-source/page-source.interface";
 import SourceImageStrategy from "../strategy.interface";
 
 class CotoImageStrategy implements SourceImageStrategy {

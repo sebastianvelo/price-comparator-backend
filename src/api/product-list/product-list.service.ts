@@ -1,6 +1,6 @@
 import { logAccent, logTitle } from "../../common/Logger";
 import * as PageService from "../common/page/page.service";
-import PageSource from "../common/source-url/page-source/page-source.interface";
+import PageSource from "../common/page-source/page-source.interface";
 import * as SourceURLService from "../common/source-url/source-url.service";
 import ProductListResponse from "./product-list.interface";
 import * as StrategyService from "./strategy/strategy.service";

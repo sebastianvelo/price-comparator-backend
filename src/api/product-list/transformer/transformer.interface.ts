@@ -1,6 +1,6 @@
 import { Cheerio, Element } from "cheerio";
 import { logAccent, logInfo } from "../../../common/Logger";
-import PageSource from "../../common/source-url/page-source/page-source.interface";
+import PageSource from "../../common/page-source/page-source.interface";
 import ModelTransformer from "../../common/transformer/transformer.interface";
 import Product, { Calification, Price } from "../../product/product.interface";
 import * as SourceImageService from "../../../api/common/source-image/source-image.service";

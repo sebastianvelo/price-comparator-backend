@@ -9,7 +9,7 @@ class MercadoLibreProductTransformer extends ProductTransformer {
         return words && words[words.length - 1];
     };
 
-    protected getImage = (element: Cheerio<Element>) => element.find(".ui-search-result-image__element").attr("src") ?? "";
+    protected getImage = (element: Cheerio<Element>) => element.find(".ui-search-result-image__element").prop('data-src') ?? "";
 
     protected getName = (element: Cheerio<Element>) => element.find(".ui-search-item__title").text();
 
