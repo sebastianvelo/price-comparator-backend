@@ -1,6 +1,8 @@
+import bodyParser from "body-parser";
+import cors from "cors";
 import * as dotenv from "dotenv";
 import express from "express";
-import init from "./app.init";
+import helmet from "helmet";
 import setRoutes from "./app.routes";
 
 dotenv.config();
@@ -11,7 +13,12 @@ if (!process.env.PORT) {
 
 const PORT: number = parseInt(process.env.PORT as string, 10);
 const app = express();
-init(app);
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(helmet());
 setRoutes(app);
 
 app.listen(PORT, () => {
