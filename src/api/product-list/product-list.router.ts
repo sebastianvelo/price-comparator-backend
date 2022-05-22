@@ -11,6 +11,7 @@ productListRouter.get("/:source/:query", async (req: Request, res: Response) => 
 
     try {
         const response: ProductListResponse = await ProductListService.searchInSource({ source, query });
+        res.header("Access-Control-Allow-Origin", "*")
         return res.status(200).send(response);
     } catch (e: any) {
         res.status(500).send(e.message);
@@ -23,6 +24,7 @@ productListRouter.post("/:query", async (req: Request, res: Response) => {
 
     try {
         const response: ProductListResponse = await ProductListService.searchInSources({ sources, query });
+        res.header("Access-Control-Allow-Origin", "*")
         return res.status(200).send(response);
     } catch (e: any) {
         res.status(500).send(e.message);
